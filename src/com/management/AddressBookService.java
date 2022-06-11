@@ -11,35 +11,50 @@ public class AddressBookService extends Contact{
 	}
 	static Scanner sc = new Scanner(System.in);
     static ArrayList<Contact> arrayOfContacts = new ArrayList<>();
-
- 
-
 public static void addcontact() {
 	System.out.println("Please enter your first name :");
     String first_name = sc.next();
     System.out.println("Please enter your last name :");
     String last_name = sc.next();
     sc.nextLine();
-    System.out.println("Please enter your address :");
+    System.out.println("Please enter your Address :");
     String Address = sc.nextLine();
     System.out.println("Please enter your city :");
     String city = sc.next();
     System.out.println("Please enter your state :");
     String state = sc.next();
-//    System.out.println("Please enter your zip code :");
-//    int zip = sc.nextInt();
     System.out.println("Please enter your phone number :");
     long phone_number = sc.nextLong();
     System.out.println("Please enter your email id :");
     String email = sc.next();
-    Contact c=new Contact(first_name,last_name,Address,city,state,phone_number,email);
-    arrayOfContacts.add(c);
+    Contact contact=new Contact(first_name,last_name,Address,city,state,phone_number,email);
+    arrayOfContacts.add(contact);
+}
+public static void edit_contact() {
+	System.out.println("Please enter your first name :");
+    String first_name = sc.next();
+    System.out.println("Please enter your last name :");
+    String last_name = sc.next();
+    sc.nextLine();
+    System.out.println("Please enter your Address :");
+    String Address = sc.nextLine();
+    System.out.println("Please enter your city :");
+    String city = sc.next();
+    System.out.println("Please enter your state :");
+    String state = sc.next();
+    System.out.println("Please enter your phone number :");
+    long phone_number = sc.nextLong();
+    System.out.println("Please enter your email id :");
+    String email = sc.next();
+    Contact contact=new Contact(first_name,last_name,Address,city,state,phone_number,email);
+    arrayOfContacts.add(contact);
+	
 }
     public static void display()
     {
 
-        for(Contact add : arrayOfContacts)
+        for(Contact con : arrayOfContacts)
         {
-            System.out.println(add);
+            System.out.println(con);
         }
 }}
