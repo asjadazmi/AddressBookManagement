@@ -31,6 +31,10 @@ public static void addcontact() {
     arrayOfContacts.add(contact);
 }
 public static void edit_contact() {
+	 for(Contact con : arrayOfContacts)
+     {
+         System.out.println(con);
+     }
 	System.out.println("Please enter your first name :");
     String first_name = sc.next();
     System.out.println("Please enter your last name :");
@@ -50,6 +54,24 @@ public static void edit_contact() {
     arrayOfContacts.add(contact);
 	
 }
+public static void delete() {
+	System.out.println("Enter the first name to be deleted :");
+    String first_name = sc.next();
+    if(first_name.equals(first_name))
+    {
+        System.out.println("The details are found!!");
+        first_name="";
+        last_name="";
+        Address="";
+        phone_number=(Long) null;
+        state="";
+        city="";
+        email="";
+
+        System.out.println("finally your contact deleted");
+    }
+}
+
     public static void display()
     {
 
